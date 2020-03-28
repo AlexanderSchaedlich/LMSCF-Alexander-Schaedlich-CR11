@@ -1,0 +1,41 @@
+.smallImage, .image{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.smallImageDiv{
+	height: 20vw;
+}
+
+.smallTextDiv{
+	height: 10vw;
+}
+
+/* medium devices */
+
+@media only screen and (max-width: 991px){
+	.smallImageDiv{
+		height: 30vw;
+	}
+
+	.smallTextDiv{
+		height: 15vw;
+	}
+}
+
+/* small devices */
+
+@media only screen and (max-width: 767px){
+	.smallImageDiv{
+		height: 50vw;
+	}
+
+	.smallTextDiv{
+		height: 25vw;
+	}
+}
+
+.imageDiv{
+	height: 30vw;
+}
