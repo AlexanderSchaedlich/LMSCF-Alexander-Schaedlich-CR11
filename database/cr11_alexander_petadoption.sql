@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 28. Mrz 2020 um 16:37
+-- Erstellungszeit: 29. Mrz 2020 um 17:32
 -- Server-Version: 10.4.11-MariaDB
 -- PHP-Version: 7.4.3
 
@@ -45,8 +45,8 @@ CREATE TABLE `large` (
 
 INSERT INTO `large` (`id`, `location`, `image`, `name`, `description`, `hobbies`) VALUES
 (1, 'Kettenbrueckengasse 6, 1050 Vienna', 'https://cdn.pixabay.com/photo/2017/09/07/23/02/rhodesian-ridgeback-2727035__480.jpg', 'dog', 'The domestic dog is a member of the genus Canis, which forms part of the wolf-like canids, and is the most widely abundant terrestrial carnivore.', 'walking tour'),
-(2, 'Kettenbrueckengasse 7, 1050 Vienna', 'https://cdn.pixabay.com/photo/2014/12/11/13/31/cat-564202__480.jpg', 'cat', 'The cat (Felis catus) is a domestic species of small carnivorous mammal.', 'catch mice'),
-(3, 'Kettenbrueckengasse 7, 1050 Vienna', 'https://cdn.pixabay.com/photo/2016/09/08/20/44/grey-owl-1655462__480.jpg', 'owl', 'Owls are birds from the order Strigiformes, which includes about 200 species of mostly solitary and nocturnal birds of prey typified by an upright stance, a large, broad head, binocular vision, binaural hearing, sharp talons, and feathers adapted for sile', 'catch mice'),
+(2, 'Kettenbrueckengasse 7, 1050 Vienna', 'https://cdn.pixabay.com/photo/2014/12/11/13/31/cat-564202__480.jpg', 'meow', 'The cat (Felis catus) is a domestic species of small carnivorous mammal.', 'catch mice'),
+(3, 'Kettenbrueckengasse 7, 1050 Vienna', 'https://cdn.pixabay.com/photo/2016/09/08/20/44/grey-owl-1655462__480.jpg', 'magnus', 'Owls are birds from the order Strigiformes, which includes about 200 species of mostly solitary and nocturnal birds of prey typified by an upright stance, a large, broad head, binocular vision, binaural hearing, sharp talons, and feathers adapted for sile', 'catch mice'),
 (4, 'Kettenbrueckengasse 7, 1050 Vienna', 'https://cdn.pixabay.com/photo/2010/12/23/13/36/parrot-4078__480.jpg', 'parrot', 'Parrots, also known as psittacines /ˈsɪtəsaɪnz/,[1][2] are birds of the roughly 393 species in 92 genera comprising the order Psittaciformes, found mostly in tropical and subtropical regions.', 'imitate voice');
 
 -- --------------------------------------------------------
@@ -96,10 +96,11 @@ CREATE TABLE `small` (
 --
 
 INSERT INTO `small` (`id`, `location`, `image`, `name`, `description`, `website`) VALUES
-(1, 'Kettenbrueckengasse 1, 1050 Vienna', 'https://cdn.pixabay.com/photo/2017/07/25/01/22/cat-2536662__480.jpg', 'cat', 'The cat (Felis catus) is a domestic species of small carnivorous mammal.', 'https://www.zoovienna.at/en/'),
-(2, 'Kettenbrueckengasse 2, 1050 Vienna', 'https://cdn.pixabay.com/photo/2016/01/05/17/51/dog-1123016__480.jpg', 'dog', 'The domestic dog (Canis familiaris when considered a distinct species or Canis lupus familiaris when considered a subspecies of the wolf) is a member of the genus Canis (canines), which forms part of the wolf-like canids, and is the most widely abundant t', 'https://www.zoovienna.at/en/'),
-(3, 'Kettenbrueckengasse 3, 1050 Vienna', 'https://cdn.pixabay.com/photo/2016/10/01/20/54/mouse-1708347__480.jpg', 'mouse', 'A mouse, plural mice, is a small rodent characteristically having a pointed snout, small rounded ears, a body-length scaly tail, and a high breeding rate.', 'https://www.zoovienna.at/en/'),
-(4, 'Kettenbrueckengasse 4, 1050 Vienna', 'https://cdn.pixabay.com/photo/2016/07/29/18/42/spider-1555216__480.jpg', 'spider', 'Spiders (order Araneae) are air-breathing arthropods that have eight legs and chelicerae with fangs able to inject venom.', 'https://www.zoovienna.at/en/');
+(1, 'Kettenbrueckengasse 1, 1050 Vienna', 'https://cdn.pixabay.com/photo/2017/07/25/01/22/cat-2536662__480.jpg', 'Bobby', 'The cat (Felis catus) is a domestic species of small carnivorous mammal.', 'https://www.zoovienna.at/en/'),
+(2, 'Kettenbrueckengasse 2, 1050 Vienna', 'https://cdn.pixabay.com/photo/2016/01/05/17/51/dog-1123016__480.jpg', 'fluffy', 'The domestic dog (Canis familiaris when considered a distinct species or Canis lupus familiaris when considered a subspecies of the wolf) is a member of the genus Canis (canines), which forms part of the wolf-like canids, and is the most widely abundant t', 'https://www.zoovienna.at/en/'),
+(3, 'Kettenbrueckengasse 3, 1050 Vienna', 'https://cdn.pixabay.com/photo/2016/10/01/20/54/mouse-1708347__480.jpg', 'jerry', 'A mouse, plural mice, is a small rodent characteristically having a pointed snout, small rounded ears, a body-length scaly tail, and a high breeding rate.', 'https://www.zoovienna.at/en/'),
+(4, 'Kettenbrueckengasse 4, 1050 Vienna', 'https://cdn.pixabay.com/photo/2016/07/29/18/42/spider-1555216__480.jpg', 'trench', 'Spiders (order Araneae) are air-breathing arthropods that have eight legs and chelicerae with fangs able to inject venom.', 'https://www.zoovienna.at/en/'),
+(6, 'Kettenbrueckengasse 8, 1050 Vienna', 'https://cdn.pixabay.com/photo/2016/11/29/02/53/animal-1866944__480.jpg', 'snake', 'green snake', 'https://www.zoovienna.at/en/');
 
 -- --------------------------------------------------------
 
@@ -121,7 +122,8 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `name`, `email`, `password`, `status`) VALUES
 (1, 'Alexander Schaedlich', 'aaa@gmail.com', '4f56fe65c8bd5296ca6a5f95faa0d65fb54b1ad8a87a1f816c7206803bcff938', 'admin'),
-(2, 'John Doe', 'jjj@gmail.com', '6cee67bc7a4cf88da9fea57255c80b6e699974aaa7911da9a4b7be07dd102054', 'user');
+(2, 'John Doe', 'jjj@gmail.com', '6cee67bc7a4cf88da9fea57255c80b6e699974aaa7911da9a4b7be07dd102054', 'user'),
+(3, 'John Doe', 'john.doe@mail.com', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'user');
 
 --
 -- Indizes der exportierten Tabellen
@@ -171,13 +173,13 @@ ALTER TABLE `senior`
 -- AUTO_INCREMENT für Tabelle `small`
 --
 ALTER TABLE `small`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT für Tabelle `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
