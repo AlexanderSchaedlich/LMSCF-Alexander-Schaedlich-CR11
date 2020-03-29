@@ -30,7 +30,7 @@
 		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 			<div class="navbar-nav">
 				<a class="nav-item nav-link text-white" href="#">View</a>
-				<a class="nav-item nav-link text-white" href="a_small.php">Create</a>
+				<a class="nav-item nav-link text-white" href="create.php">Create</a>
 				<a class="nav-item nav-link text-white" href="../logout.php?logout">Logout</a>
 			</div>
 		</div>
@@ -84,26 +84,8 @@
 									<p>Description: " . $row['description'] . "</p>
 									" . $differentParams . "
 									<br>
-
-									<form action='update.php' method='post' class='d-inline mr-2'>
-										<input type='hidden' name='table' 
-											value='" . $tables[$i] . "'>
-
-										<input type='hidden' name='id' 
-											value='" . $row['id'] . "'>
-
-										<button type='submit' class='btn btn-secondary'>Update</button>
-									</form>
-
-									<form action='delete.php' method='post' class='d-inline'>
-										<input type='hidden' name='table' 
-											value='" . $tables[$i] . "'>
-
-										<input type='hidden' name='id' 
-											value='" . $row['id'] . "'>
-
-										<button type='submit' class='btn btn-secondary'>Delete</button>
-									</form>
+									<a href='update.php?table=" . $tables[$i] . "&id=" . $row['id'] . "' class='btn btn-secondary'>Update</a>
+									<a href='delete.php?table=" . $tables[$i] . "&id=" . $row['id'] . "' class='btn btn-secondary'>Delete</a>
 								</div>
 							</div>
 						</div>
@@ -135,3 +117,12 @@
 </html>
 
 <?php ob_end_flush(); ?>
+<!-- <form action='update.php' method='get' class='d-inline mr-2'>
+										<input type='hidden' name='table' 
+											value='" . $tables[$i] . "'>
+
+										<input type='hidden' name='id' 
+											value='" . $row['id'] . "'>
+
+										<button type='submit' name='update' class='btn btn-secondary'>Update</button>
+									</form> -->
